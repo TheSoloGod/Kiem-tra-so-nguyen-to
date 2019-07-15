@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let i = Number(prompt("Nhập số cần kiểm tra"),'');
+        if(kiemTraSNT(i)){
+            alert(i + " là số nguyên tố");
+        }else {
+            alert(i + " không phải là số nguyên tố");
+        }
+        // function isPrime(i) {
+        //     if(i<2){
+        //         return false;
+        //     }
+        //     if(i==2){
+        //         return true;
+        //     }
+        //     for(let j=2; j<=Math.sqrt(i); j++){
+        //         if(i%j==0){
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        function kiemTraSNT(i) {
+            if(i<2){
+                return false;
+            }
+            if(i==2){
+                return true;
+            }
+            for(let j=2; j<=Math.sqrt(i); j++){
+                if (i%j == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
